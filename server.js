@@ -17,7 +17,7 @@ app.use(express.static('public'))
 
 app.use(express.urlencoded({extended: true}))
 
-  const response = await fetch ('https://the-sprint-api.onrender.com/people')
+  const peopleResponse = await fetch ('https://the-sprint-api.onrender.com/people')
 
 app.get('/', async (req, res) => {
 
@@ -39,7 +39,7 @@ app.get('/', async (req, res) => {
     }
 
 });
-app.set('port', process.env.PORT || 8000)
+app.set('port', process.env.PORT || 7000)
 
 app.listen(app.get('port'), function () {
   console.log(`Application started on http://localhost:${app.get('port')}`)
